@@ -4,7 +4,12 @@ volumes:
   db:
 
 services:
-  mysql:
+  spring:
+    build: .
+    image: spring-backend
+    ports:
+      - 8080:8080
+  mariadb:
     image: mariadb:10.9.4
     ports:
       - 3306:3306

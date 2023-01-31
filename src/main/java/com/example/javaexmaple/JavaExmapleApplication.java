@@ -24,7 +24,7 @@ public class JavaExmapleApplication {
 	@Bean
 	CommandLineRunner clCommandLineRunner(){
 		return args ->{
-			int max = 1000;
+			int max = 100;
             Faker faker = new Faker(new Locale("en-US"));
 			for (int i = 0; i < max; i++) {
 				User user = new User(i, faker.name().firstName(), faker.name().lastName(), faker.beer().hashCode());
